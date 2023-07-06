@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit Job </h1>
+    <form action="/jobs/<%= job._id %>?_method=patch" method="post">
+        <input type="text" name="postName" id="" placeholder="Post Name" value="<%= job.postName %>">
+        <input type="text" name="companyName" id="" placeholder="company Name" value="<%= job.companyName %>">
+        <input type="number" name="ctc" id="" placeholder="CTC" value="<%= job.ctc %>">
+        <input type="number" name="cgpa" id="" placeholder="CGPA" value="<%= job.cgpa %>">
+        <input type="text" name="location" id="" placeholder="location" value="<%= job.location %>">
+        <input type="number" name="numberOfPosition" id="" placeholder="numberOfPosition" value="<%= job.numberOfPosition %>">
+        <textarea name="description" id="" cols="30" rows="10"><%= job.description  %></textarea>
+        <input type="submit" value="Edit Job">
+    </form>
+</body>
+</html>

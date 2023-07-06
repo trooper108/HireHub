@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+</head>
+<body>
+    <form action="/user/<%= user._id %>/resume" method="post">
+        <input type="text" name="name" placeholder="Name">
+        <input type="text" name="phone" placeholder="Phone">
+        <input type="text" name="Linkdin" placeholder="Linkdin">
+        <br>
+        <label for="">experience</label>
+        <input type="text" name="experience[companyName]" id="" placeholder="companyName">
+        <input type="date" name="experience[startDate]" id="" placeholder="startDate">
+        <input type="date" name="experience[endDate]" id=""placeholder="endDate">
+        <input type="text" name="experience[designation]" id=""placeholder="designation">
+        <input type="text" name="experience[description]" id="" placeholder="description">
+        <input type="submit" value="resume Save">
+        
+    </form>
+    
+</body>
+</html>

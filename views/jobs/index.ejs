@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jobs|Index</title>
+</head>
+<body>
+
+    <% if(success && success.length > 0){ %>
+        <div><%= success %></div>
+    <% } %>
+    <% if(error && error.length > 0){ %>
+        <div><%= error %></div>
+    <% } %>
+    <h1>Index Page for Jobs</h1>
+    <form action="/jobs/search" method="get">
+        <input type="text" name="name" id="">
+        <input type="submit" value="search">
+    </form>
+    <% for(let job of jobs) { %>
+        <li><%= job.companyName  %> <a href="/jobs/<%= job._id %>">View More</a></li>
+    <% } %>
+</body>
+</html>

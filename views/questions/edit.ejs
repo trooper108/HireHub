@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new Questions</title>
+</head>
+<body>
+    <form action="/jobs/<%= id %>/questions/<%= idx %>?_method=patch" method="post">
+        <input type="text" name="title" id=""  value="<%= ques.title %>">
+        <input type="text" name="options1" id="" value="<%= ques.options1 %>">
+        <input type="text" name="options2" id="" value="<%= ques.options2 %>">
+        <input type="text" name="options3" id="" value="<%= ques.options3 %>">
+        <input type="text" name="options4" id="" value="<%= ques.options4 %>">
+        <input type="text" name="correctAnswer" id="" value="<%= ques.correctAnswer %>">
+        <input type="submit" value="edit questions">
+    </form>
+</body>
+</html>

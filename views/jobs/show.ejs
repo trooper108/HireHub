@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <% if(success && success.length > 0){ %>
+      <div><%= success %></div>
+  <% } %>
+  <% if(error && error.length > 0){ %>
+      <div><%= error %></div>
+  <% } %>
+    <h1><%= job.postName %></h1>
+    <h2><%= job.companyName %></h2>
+    <h2><%= job.ctc %></h2>
+    <h2><%= job.cgpa %></h2>
+    <h2><%= job.location %></h2>
+    <h2><%= job.numberOfPosition %></h2>
+    <h2><%= job.description %></h2>
+    <h2><%= job.status %></h2>
+    <button><a href="/jobs/<%= job._id %>/edit">Edit</a></button>
+    <button><a href="/jobs/<%= job._id %>/apply/<%= currentUser._id %>">Apply</a></button>
+    <form action="/jobs/<%= job._id %>?_method=delete" method="post">
+    <input type="submit" value="delete">
+    </form>
+  </body>
+</html>

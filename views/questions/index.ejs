@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questions</title>
+</head>
+<body>
+    <% for(let ques of job.questions){ %>
+        <div>title : <%= ques.title %></div>
+        <div> options1 : <%= ques.options1 %></div>
+        <div> options1 : <%= ques.options2 %></div>
+        <div> options1 : <%= ques.options3 %></div>
+        <div> options1 : <%= ques.options4 %></div>
+        <div> options1 : <%= ques.correctAnswer %></div>
+        <form action="/jobs/<%= job._id %>/questions/<%= count %>?_method=delete" method="post">
+        <input type="submit" value="delete">
+        </form>
+        <% count++ %>
+    <% } %>
+    
+</body>
+</html>

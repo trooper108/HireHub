@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <form action="/jobs/<%= job._id %>/test" method="post">
+        <% job.questions.forEach((ques,i) => { %>
+            <h3><%= ques.title  %></h3>    
+            <div>
+            <input type="radio" name="question<%= i %>" id="question <%= i %>1" value="<%= ques.options1 %>">
+            <label for="question <%= i %>1"><%= ques.options1 %></label>
+            </div>
+            <div>
+            <input type="radio" name="question<%= i %>" id="question <%= i %>2" value="<%= ques.options2 %>">
+            <label for="question <%= i %>2"><%= ques.options2 %></label>
+            </div>
+            <div>
+            <input type="radio" name="question<%= i %>" id="question <%= i %>3" value="<%= ques.options3 %>">
+            <label for="question <%= i %>3"><%= ques.options3 %></label>
+        </div>
+        <div>
+            <input type="radio" name="question<%= i %>" id="question <%= i %>4" value="<%= ques.options4 %>">
+            <label for="question <%= i %>4"><%= ques.options4 %></label>
+        </div>
+        <% }); %>
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+    </form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show</title>
+</head>
+<body>
+    <h1>Show page for <%= foundUser.username %></h1>
+    <form action="/user/<%= foundUser._id %>?_method=patch" method="post">
+        <input type="text" name="username" value="<%= foundUser.username %>" disabled>
+        <input type="date" name="dob" value="<%= foundUser.dob %>">
+        <input type="text" name="phone" value="<%= foundUser.phone %>">
+        <input type="text" name="cgpa" value="<%= foundUser.cgpa %>">
+        <input type="submit" value="update">
+    </form>
+
+    
+</body>
+</html>
